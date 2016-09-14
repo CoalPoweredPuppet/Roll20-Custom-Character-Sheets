@@ -610,54 +610,7 @@ input.sheet-word[type="checkbox"]:checked + span::before {
     box-shadow:none;
 }
 /*------------End of word Checkbox-----------*/
-/*------------Claw Checkbox-----------*/
-/* Hide actual checkbox */
-input.sheet-claw[type="checkbox"] {
-    opacity: 0;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 0px;
-    left: 30px;
-    margin-top: 0px;
-    margin-left: 00px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    z-index: 1;
-}
 
-/* Fake checkbox */
-input.sheet-claw[type="checkbox"] + span::before {
-    background:url('http://i.imgur.com/rCFwOuc.png) no-repeat;
-    background-size:100%;
-    width: 30px;
-    height: 30px;
-    box-shadow:none;
-    border:none;
-    -webkit-filter: drop-shadow(0px 0px 5px red);
-
-    position: relative;
-    top: 0px;
-    left: 0px;
-}
-
-input.sheet-claw[type="checkbox"]:checked + span::before {
-    background:url('http://i.imgur.com/MHJcREh.png') no-repeat;
-    background-size:100%;
-    content:"";
-    width: 30px;
-    height: 30px;
-    box-shadow:none;
-    border:none;
-    -webkit-filter: drop-shadow(0px 0px 5px white);
-
-}
-
-input.sheet-claw:checked ~ div.sheet-body {
-    display: none;
-}
-/*-------end of Claw Checkbox-----------*/
 /*-----radio boxes-----*/
 
 /* -----Hide actual radio----- */
@@ -846,65 +799,72 @@ button[type=roll].sheet-adv:active {
     color:white;
 }
 
-.sheet-rolltemplate-skill table {
-    width: 189px;
-    height: 189px;
-    padding: 2px;
-    background: url(http://i.imgur.com/xBk4U1p.jpg) top left;
-    background-size: 189px 189px;
-    background-repeat: no-repeat;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    border-spacing: 0;
-}
- 
-.sheet-rolltemplate-skill th {
-    color: rgb(112, 0, 0);
-    padding: 15px 2px 2px 20px;
-	line-height: 1.2em;
-	font-size: 1.2em;
-    text-align: left;
-}
- 
- 
-.sheet-rolltemplate-skill td {
-    padding-left: 20px;
-    font-size: 1.0em;
-    vertical-align: top;
-}
- 
-.sheet-rolltemplate-skill .sheet-result {
-    font-size: 1.2em;
-    text-align: center;
-    color: rgb(112, 0, 0);
-    padding-bottom: 20px;
-}
- 
-.sheet-rolltemplate-skill .inlinerollresult  {
-    background-color: transparent;
-    color: #000000;
-    border: none;
-}
- 
-.sheet-rolltemplate-skill .inlinerollresult.fullcrit {
-	color: #3FB315;
-    border: none;
-}
- 
-.sheet-rolltemplate-skill .inlinerollresult.fullfail {
-    color: #000000;
-    border: none;
-}
- 
-.sheet-rolltemplate-skill .inlinerollresult.importantroll {
-	color: #3FB315;
-    border: none;
+/*=============================================================================== BEGIN Dropdown Checkbox Setup ===============================================*/
+/*========== By Raire R. | Code built off of W20 Character Sheet Code ==========*/
+
+/*-------------------------------- Vampire the Masquerade Variant ----------*/
+/* Hide actual checkbox */
+input.sheet-snake[type="checkbox"] {
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 0px;
+    left: 30px;
+    margin-top: 0px;
+    margin-left: 00px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-/*-------------Add-On--------------------------------------------------------------------------*/
-/*------------Claw Checkbox-----------*/
+/* Fake checkbox */
+input.sheet-snake[type="checkbox"] + span::before {
+    background:url('http://i.imgur.com/rCFwOuc.png) no-repeat;
+    background-size:100%;
+    width: 30px;
+    height: 30px;
+    box-shadow:none;
+    border:none;
+    -webkit-filter: drop-shadow(0px 0px 5px red);
+
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+input.sheet-snake[type="checkbox"]:checked + span::before {
+    background:url('http://i.imgur.com/MHJcREh.png') no-repeat;
+    background-size:100%;
+    content:"";
+    width: 30px;
+    height: 30px;
+    box-shadow:none;
+    border:none;
+    -webkit-filter: drop-shadow(0px 0px 5px white);
+
+}
+
+input.sheet-snake:checked ~ div.sheet-body {
+    display: none;
+}
+
+/*-------------------------------- Werewolf the Apocalypse Variant ----------*/
+
+/*-------------------------------- Mage the Acension Variant ----------*/
+
+/*-------------------------------- Wraith the Oblivion Variant ----------*/
+
+/*-------------------------------- Changeling the Dreaming Variant ----------*/
+
+/*=============================================================================== END Dropdown Checkbox Setup ===============================================*/
+
+/*=============================================================================== BEGIN Willpower Checkbox Setup ===============================================*/
+/*========== By Raire R. | Code built off of W20 Character Sheet Code ==========*/
+
 /* Hide actual checkbox */
-input.sheet-vtm[type="checkbox"] {
+input.sheet-willpower_checkbox[type="checkbox"] {
     opacity: 0;
     width: 14px;
     height: 14px;
@@ -920,7 +880,7 @@ input.sheet-vtm[type="checkbox"] {
 }
 
 /* Fake checkbox */
-input.sheet-vtm[type="checkbox"] + span::before {
+input.sheet-willpower_checkbox[type="checkbox"] + span::before {
 
     margin-right: 4px;
     border: solid 1px #a8a8a8;
@@ -941,7 +901,7 @@ input.sheet-vtm[type="checkbox"] + span::before {
     background: radial-gradient(#f6f6f6, #dfdfdf);
 }
 
-input.sheet-vtm[type="checkbox"]:checked + span::before {
+input.sheet-willpower_checkbox[type="checkbox"]:checked + span::before {
     content:"✖";
     margin-right: 4px;
     border: solid 1px #a8a8a8;
@@ -963,11 +923,11 @@ input.sheet-vtm[type="checkbox"]:checked + span::before {
 
 }
 
-input.sheet-vtm:checked ~ div.sheet-body {
-    display: none;
-}
+/*=============================================================================== END Willpower Checkbox Setup ===============================================*/
 
-/* ===== CSS TOOLTIP ===== */
+/*=============================================================================== BEGIN Tooltip Setup ===============================================*/
+/*========== By (Insert Author Here) | Taken from the Unofficial RWBY Tabletop Character Sheet ==========*/
+
 .sheet-popup {
 
 }
@@ -1077,8 +1037,9 @@ font-size: 1.1em ;
     box-shadow: 3px #CCC;
 }
 
-/*===============================================================================BEGIN Mage Quintessence/Paradox ===============================================*/
-/*================================================================ BEGIN Paradox Setup ==========*/
+/*=============================================================================== END Tooltip Setup ===============================================*/
+
+/*=============================================================================== BEGIN Mage Quintessence/Paradox ===============================================*/
 /*========== By Matt Zaldiver & Lithl | Taken from the M20 Character Sheet==========*/
 
 div.sheet-qdot {
@@ -1220,4 +1181,65 @@ select.sheet-wheeln171{
     transform:rotate(-171deg);
     -ms-transform:rotate(-171deg); /* IE 9 */
     -webkit-transform:rotate(-171deg); /* Opera, Chrome, and Safari */
+}
+
+/*=============================================================================== END Mage Quintessence/Paradox ===============================================*/
+
+/*=============================================================================== BEGIN Roll Templates ===============================================*/
+/*========== By (Insert Author Here) | (Insert Source Here) ==========*/
+
+/*================================================================ ||| ==========*/
+.sheet-rolltemplate-skill table {
+    width: 189px;
+    height: 189px;
+    padding: 2px;
+    background: url(http://i.imgur.com/xBk4U1p.jpg) top left;
+    background-size: 189px 189px;
+    background-repeat: no-repeat;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-spacing: 0;
+}
+ 
+.sheet-rolltemplate-skill th {
+    color: rgb(112, 0, 0);
+    padding: 15px 2px 2px 20px;
+    line-height: 1.2em;
+	font-size: 1.2em;
+    text-align: left;
+}
+ 
+ 
+.sheet-rolltemplate-skill td {
+    padding-left: 20px;
+    font-size: 1.0em;
+    vertical-align: top;
+}
+ 
+.sheet-rolltemplate-skill .sheet-result {
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(112, 0, 0);
+    padding-bottom: 20px;
+}
+ 
+.sheet-rolltemplate-skill .inlinerollresult  {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+ 
+.sheet-rolltemplate-skill .inlinerollresult.fullcrit {
+	color: #3FB315;
+    border: none;
+}
+ 
+.sheet-rolltemplate-skill .inlinerollresult.fullfail {
+    color: #000000;
+    border: none;
+}
+ 
+.sheet-rolltemplate-skill .inlinerollresult.importantroll {
+	color: #3FB315;
+    border: none;
 }
