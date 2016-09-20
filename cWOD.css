@@ -1,5 +1,159 @@
+/*=============================================================================== BEGIN Main Settings ===============================================*/
+/*========== By (Insert Author Here); Raire R. | Code built off of W20 Character Sheet Code ==========*/
+
+.charsheet {
+}
+
+.charsheet {
+    font-family: 'Sylfean'; 
+    color: black;
+    text-shadow: 0em 0em 0.5em white, 0em 0em 0.5em white, 0em 0em 0.5em black, 0em 0em 0.5em white, 0em 0em 0.5em white;
+}
+    
+@font-face {
+    font-family: 'RufscriptRegular'; 
+    src: url('http://openfontlibrary.org/assets/fonts/rufscript/92112519f91e7a5ab80261a017c09b72/f886671cdc88e2725676a457e14e8512/RufscriptRegular.ttf');
+    font-weight: normal; 
+    font-style: normal;
+}
+
+.charsheet label {
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+    padding-bottom: 0px;
+}
+
+.charsheet input {
+    display: inline-block;
+    width: 150px;
+}
+
+.charsheet select {
+    width: 40px;
+    height: 20px;
+    margin:0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+/*.charsheet select {
+    width: 42px;
+    margin-bottom:0;
+}*/
+
+.charsheet textarea {
+    resize:vertical;
+}
+
+/*-----Background Swapper-----*/
+.sheet-background_swapper {
+    float: left; 
+    position:absolute;
+    clear:both;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+
+.sheet-vampire-only, 
+.sheet-werewolf-only,
+.sheet-mage-only,
+.sheet-wraith-only,
+.sheet-changeling-only {
+    display:none;
+}
+
+input.sheet-vampire:checked ~ .sheet-vampire-only,
+input.sheet-werewolf:checked ~ .sheet-werewolf-only,
+input.sheet-mage:checked ~ .sheet-mage-only,
+input.sheet-wraith:checked ~ .sheet-wraith-only,
+input.sheet-changeling:checked ~ .sheet-changeling-only {
+    display:inline;
+}
+/*-----------------------------*/
+
+/*-----Sheet Table-----*/
+.sheet-table {
+    margin-left:auto;
+    margin-right:auto;
+    }
+/*---------------------*/
+
+/*-----Sheet Shifter-----*/
+.sheet-shifter[type="number"] {
+    background:transparent;
+    text-align:center;
+    box-shadow:none;
+    border:none;
+    color:black;
+    text-shadow:0px 0px 2px white,0px 0px 2px white,0px 0px 2px white;
+}
+
+.sheet-shifter {
+    color:white;
+    text-shadow: 0px 0px 3px black,0px 0px 3px black,0px 0px 3px black;
+    font-size:1.2em;
+    opacity: 1;
+}
+
+.sheet-shifter th {
+    color:black;
+    text-shadow: 0px 0px 3px white,0px 0px 3px white,0px 0px 3px white;
+    font-size:1.4em;
+}
+
+.sheet-shifter:active,
+.sheet-shifter:hover {
+    opacity: 1.0;
+}
+/*----------------------*/
+
+/*-----Swapping Stuff-----*/
+div.sheet-block_a {
+    display: inline;
+}
+
+div.sheet-block_b {
+    display: none;
+}
+
+input.sheet-block_switch:checked ~ div.sheet-block_a {
+    display: none;
+}
+
+input.sheet-block_switch:checked ~ div.sheet-block_b {
+    display: inline;
+}
+/*------------------------*/
+
+.sheet-formsbanner {
+    background: url('http://www.allmystery.de/i/t6ea465_Full_Moon_Offering_I_by_fobiapharmer.jpg') no-repeat;
+    background-size:100%;
+}
+
+th.sheet-gray,
+td.sheet-gray {
+    background: linear-gradient(rgba(128,128,128,0.5),rgba(128,128,128,0.5));
+    }
+
+.sheet-red {
+    color:red;
+    text-shadow: 0px 0px 3px black,0px 0px 3px black,0px 0px 3px black;
+    font-size:1.4em;
+}
+
+.sheet-smallcaps {
+    font-variant: small-caps;
+}
+
+/*=============================================================================== END Main Settings ===============================================*/
 
 /*=============================================================================== BEGIN Character Sheet Variants ===============================================*/
+/*========== By Raire R. | Code built off of W20 Character Sheet Code ==========*/
+
 .charsheet div[class^="sheet-game"] {     
     /*visibility: hidden;
     opacity: 0;
@@ -8,7 +162,9 @@
     display: none;
 }
 
-/*================================================================ BEGIN Game Tab Icon Variants ==========*/
+/*=============================================================================== BEGIN Game Tab Icon Variants ===============================================*/
+/*========== By Raire R. | Code built off of W20 Character Sheet Code ==========*/
+
 /*-------------------------------- Vampire the Masquerade Variant ----------*/
 .charsheet input.sheet-vampire {
     width: 100px;
@@ -22,7 +178,7 @@
 }
 
 .charsheet span.sheet-vampire {
-	text-align: center;
+    text-align: center;
     display: inline-block; 
 	font-size: 13px;	
     background:url('http://i.imgur.com/VHGD0e6.png') no-repeat;
@@ -270,8 +426,9 @@
 /*================================================================ END Game Tab Icon Variants ==========*/
 /*=============================================================================== END Character Sheet Variants ===============================================*/
 
-/*=============================================================================== BEGIN TABS ===============================================*/
-/*================================================================ BEGIN Tab Setup ==========*/
+/*=============================================================================== BEGIN Tabs ===============================================*/
+/*========== By (Insert Author Here) | Taken from W20 Character Sheet Code ==========*/
+
 div.sheet-core-content { 
     display: none; 
     width:840px;
@@ -386,128 +543,11 @@ div.sheet-core-content {
     border:2px solid white;
 }
 
-/*================================================================ END Tab Setup ==========*/
-/*=============================================================================== END TABS ===============================================*/
-
-.charsheet {
-    background: url('http://i.imgur.com/kfIoOkc.png?1');
-    background-size:100%;
-    width:840px;
-}
-
-.charsheet {
-    background-color: white;
-}
-
-.charsheet {
-    font-family: 'RufscriptRegular'; 
-    color: black;
-    text-shadow: 0em 0em 0.5em white, 0em 0em 0.5em white, 0em 0em 0.5em black, 0em 0em 0.5em white, 0em 0em 0.5em white;
-}
-    
-@font-face {
-    font-family: 'RufscriptRegular'; 
-    src: url('http://openfontlibrary.org/assets/fonts/rufscript/92112519f91e7a5ab80261a017c09b72/f886671cdc88e2725676a457e14e8512/RufscriptRegular.ttf');
-    font-weight: normal; 
-    font-style: normal;
-}
-
-.charsheet label {
-    display: inline-block;
-    width: 75px;
-    text-align: right;
-    padding-bottom: 0px;
-}
-
-.charsheet input {
-    display: inline-block;
-    width: 150px;
-}
-
-.charsheet select {
-    width: 40px;
-    height: 20px;
-    margin:0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-}
-
-/*.charsheet select {
-    width: 42px;
-    margin-bottom:0;
-}*/
-
-.charsheet textarea {
-    resize:vertical;
-}
-
-.sheet-shifter[type="number"] {
-    background:transparent;
-    text-align:center;
-    box-shadow:none;
-    border:none;
-    color:black;
-    text-shadow:0px 0px 2px white,0px 0px 2px white,0px 0px 2px white;
-}
-/*-----Sheet Table-----*/
-.sheet-table {
-    margin-left:auto;
-    margin-right:auto;
-    }
-/*-----End of Sheet Table-----*/
-.sheet-formsbanner {
-    background: url('http://www.allmystery.de/i/t6ea465_Full_Moon_Offering_I_by_fobiapharmer.jpg') no-repeat;
-    background-size:100%;
-}
-
-.sheet-shifter {
-    color:white;
-    text-shadow: 0px 0px 3px black,0px 0px 3px black,0px 0px 3px black;
-    font-size:1.2em;
-    opacity: 1;
-}
-
-.sheet-shifter th {
-    color:black;
-    text-shadow: 0px 0px 3px white,0px 0px 3px white,0px 0px 3px white;
-    font-size:1.4em;
-}
-th.sheet-gray,
-td.sheet-gray {
-    background: linear-gradient(rgba(128,128,128,0.5),rgba(128,128,128,0.5));
-    }
-
-
-.sheet-shifter:active,
-.sheet-shifter:hover {
-    opacity: 1.0;
-}
-.sheet-red {
-    color:red;
-    text-shadow: 0px 0px 3px black,0px 0px 3px black,0px 0px 3px black;
-    font-size:1.4em;
-}
-
-.sheet-smallcaps {
-    font-variant: small-caps;
-}
-/*-----swapping stuff-----*/
-div.sheet-block_a {
-    display: inline;
-}
-
-div.sheet-block_b {
-    display: none;
-}
-
-input.sheet-block_switch:checked ~ div.sheet-block_a {
-    display: none;
-}
-
-input.sheet-block_switch:checked ~ div.sheet-block_b {
-    display: inline;
-}
+/*=============================================================================== END Tabs ===============================================*/
 
 /*=============================================================================== BEGIN Better Checkbox/Radio ===============================================*/
+/*========== By (Insert Author Here) | Taken from W20 Character Sheet Code ==========*/
+
 /*------------Better Checkbox-----------*/
 /* Hide actual radio/checkbox */
 input[type="checkbox"]
