@@ -546,8 +546,6 @@ div.sheet-core-content {
 /*=============================================================================== END Tabs ===============================================*/
 
 /*=============================================================================== BEGIN Better Checkbox/Radio ===============================================*/
-/*========== By (Insert Author Here) | Taken from W20 Character Sheet Code ==========*/
-
 /*------------Better Checkbox-----------*/
 /* Hide actual radio/checkbox */
 input[type="checkbox"]
@@ -861,7 +859,7 @@ input.sheet-snake[type="checkbox"] {
 
 /* Fake checkbox */
 input.sheet-snake[type="checkbox"] + span::before {
-    background:url('http://i.imgur.com/rCFwOuc.png) no-repeat;
+    background:url('http://i.imgur.com/rCFwOuc.png') no-repeat;
     background-size:100%;
     width: 30px;
     height: 30px;
@@ -889,7 +887,34 @@ input.sheet-snake[type="checkbox"]:checked + span::before {
 input.sheet-snake:checked ~ div.sheet-body {
     display: none;
 }
+/*==========Combat Caster button==========*/
+button[type="roll"].sheet-snake_btn:before {
+    content: ""!important;
+    display: none;
+}
 
+button[type="roll"].sheet-snake_btn {
+    height:24px;
+    width:24px;
+    border:none;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    background:url('http://i.imgur.com/MHJcREh.png');
+    background-size: 100%;
+}
+
+button[type="roll"].sheet-snake_btn:hover {
+    background:url('http://i.imgur.com/rCFwOuc.png') no-repeat;
+    background-size:100%;
+}
+
+button[type="roll"].sheet-snake_btn:active {
+    background:url('http://i.imgur.com/rCFwOuc.png') no-repeat;
+    background-size:100%;
+    background-color:red;
+}
 /*-------------------------------- Werewolf the Apocalypse Variant ----------*/
 
 /*-------------------------------- Mage the Acension Variant ----------*/
@@ -1079,9 +1104,394 @@ font-size: 1.1em ;
 
 /*=============================================================================== END Tooltip Setup ===============================================*/
 
-/*=============================================================================== BEGIN Mage Quintessence/Paradox ===============================================*/
-/*========== By Matt Zaldiver & Lithl | Taken from the M20 Character Sheet==========*/
+/*=============================================================================== BEGIN Werewolf Stuff ===============================================*/
+/*========== By Coal Powered Puppet | (Insert Source Here) ==========*/
+    /* Sheet Forms Fake radio */
+input.sheet-forms[type="radio"] {
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: -3px;
+    left: 2px;
+    margin: -8px;
+    cursor: pointer;
+    z-index: 1;
+}
 
+    /* Fake radio */
+input.sheet-forms[type="radio"] + span::before {
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 12px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+    
+    content: "";
+    width: 12px;
+    height: 12px;
+    font-size: 24px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+
+input.sheet-forms[type="radio"]:checked + span::before {
+    content: "";
+    background: black;
+    background: -moz-radial-gradient(white,green, red);
+    background: -webkit-radial-gradient(white, green,red);
+    background: -ms-radial-gradient(white,green, red);
+    background: -o-radial-gradient(white,green, red);
+    background: radial-gradient(white, green,red);
+}
+/* Sheet shape Fake radio */
+input.sheet-shape[type="radio"] {
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*-----------   form_select radio   -----------*/
+input.sheet-form_select[type="radio"]
+{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 0px;
+    left: 70px;
+    margin-left: 0px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-right: 0px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    width:70px;
+    box-shadow: 0px 0px 5px blue;
+}
+.charsheet input.sheet-form_select + span.sheet-form_select {
+    color:black;
+}
+.charsheet input.sheet-form_select:checked + span.sheet-form_select {
+    color:white;
+    text-shadow: 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 5px red,0px 0px 5px red;
+    }
+span.sheet-form_select {
+    width:100px;
+    text-align:right;
+    }
+
+.charsheet input.sheet-form_select + span.sheet-form_select {
+    width:70px;
+    text-align:right;
+    }
+    
+table.sheet-forms {
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    border-spacing: 20px;
+    background: white;
+    color:black;
+    padding-left:10px;
+    border-radius:5px;
+}
+
+table.sheet-forms input[type="number"] {
+   text-align:center;
+}
+
+table.sheet-forms th {
+    text-shadow: 0px 0px 10px #380000;
+}
+
+table.sheet-forms h5 {
+    text-shadow: 0px 0px 5px black;
+}
+
+.sheet-rotate {
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    margin-left:-10px;
+    text-align:left;
+}
+/*=============================================================================== END Werewolf Stuff ===============================================*/
+
+/*=============================================================================== BEGIN Mage Quintessence/Paradox ===============================================*/
+/*========== By Coal Powered Puppet | (Insert Source Here) ==========*/
+/*-------quintessence---------*/
+/*========== rotating images ==========*/
+div.sheet-quintessence {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+input.sheet-quintessence {
+    margin: 0px 0px 0px 0px;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+span.sheet-quintessence {
+    margin: 00px 0 0 00px;
+    display: none;
+}
+
+
+input.sheet-empty { z-index: 2; }
+
+input.sheet-empty:checked + input.sheet-q,
+input.sheet-q:checked + input.sheet-p { z-index: 3; }
+
+input.sheet-empty:checked ~ span.sheet-empty,
+input.sheet-q:checked ~ span.sheet-q,
+input.sheet-p:checked ~ span.sheet-p { display: inline-block; }
+
+.sheet-empty {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    font-size:20px;
+    -webkit-filter: drop-shadow(0px 0px 5px black);
+}
+
+.sheet-q {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    font-size:20px;
+    -webkit-filter: drop-shadow(0px 0px 5px black);
+}
+
+.sheet-p {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    font-size:20px;
+    -webkit-filter: drop-shadow(0px 0px 5px black);
+}
+/*  %%%%%%%%%%%%%%%%%%%%%%%%%%%%            */
+
+.sheet-wheel{
+    width: 20px;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/* Position checkboxes vertically in circle */
+.sheet-top  { top: 5px; }
+.sheet-top + span::before { top: 5px; }
+.sheet-mid-eighth { top: 10px; }
+.sheet-mid-eighth + span::before  { top: 10px; }
+.sheet-mid-quarter { top: 20px; }
+.sheet-mid-quarter + span::before  { top: 20x; }
+.sheet-mid-three-eighth { top: 30px; }
+.sheet-mid-three-eighth + span::before  { top: 30px; }
+.sheet-middle {top: 40px; }
+.sheet-middle + span::before  { top: 40px; }
+.sheet-middle-2 { top: 50px; }
+.sheet-middle-2 + span::before  { top: 50px; }
+.sheet-mid-five-eighth { top: 60px; }
+.sheet-mid-five-eighth + span::before  { top: 60px; }
+.sheet-mid-three-quarter { top: 70px; }
+.sheet-mid-three-quarter + span::before  { top: 70px; }
+.sheet-mid-seven-eighth { top: 80px; }
+.sheet-mid-seven-eighth + span::before  { top: 80px; }
+.sheet-bottom { top: 90px; }
+.sheet-bottom+ span, 
+.bottom+ span::before  { top: 90px; }
+
+/* Position checkboxes horizontally in circle */
+.sheet-left-1 { left: 12px; }
+.sheet-left-1 + span::before  { left: 12px; }
+.sheet-left-2 { left: 24px; }
+.sheet-left-2 + span::before  { left: 24px; }
+.sheet-left-3 { left: 36px; }
+.sheet-left-3 + span::before  { left: 36px; }
+.sheet-left-4 { left: 48px; }
+.sheet-left-4 + span::before  { left: 48px; }
+.sheet-left-5 { left: 60px; }
+.sheet-left-5 + span::before  { left: 60px; }
+.sheet-left-6 { left: 72px; }
+.sheet-left-6 + span::before  { left: 72px; }
+.sheet-left-7 { left: 84px; }
+.sheet-left-7 + span::before  { left: 84px; }
+.sheet-left-8 { left: 96px; }
+.sheet-left-8 + span::before  { left: 96px; }
+.sheet-left-9 { left: 108px; }
+.sheet-left-9 + span::before  { left: 108px; }
+.sheet-left-10 { left: 120px; }
+.sheet-left-10 + span::before  { left: 120px; }
+
+/* Rotate checkboxes */
+.sheet-wheel9,
+.sheet-wheel9 + span::before
+{
+    transform:rotate(9deg);
+    -ms-transform:rotate(9deg);
+    -webkit-transform:rotate(9deg);
+}
+
+.sheet-wheel27,
+.sheet-wheel27 + span::before
+{
+    transform:rotate(27deg);
+    -ms-transform:rotate(27deg);
+    -webkit-transform:rotate(27deg);
+}
+
+.sheet-wheel45,
+.sheet-wheel45 + span::before
+{
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+}
+
+.sheet-wheel63,
+.sheet-wheel63 + span::before
+{
+    transform:rotate(63deg);
+    -ms-transform:rotate(63deg);
+    -webkit-transform:rotate(63deg);
+}
+
+.sheet-wheel81,
+.sheet-wheel81 + span::before
+{
+    transform:rotate(81deg);
+    -ms-transform:rotate(81deg);
+    -webkit-transform:rotate(81deg);
+}
+
+.sheet-wheel99,
+.sheet-wheel99 + span::before
+{
+    transform:rotate(99deg);
+    -ms-transform:rotate(99deg);
+    -webkit-transform:rotate(99deg);
+}
+
+.sheet-wheel117,
+.sheet-wheel117 + span::before
+{
+    transform:rotate(117deg);
+    -ms-transform:rotate(117deg);
+    -webkit-transform:rotate(117deg);
+}
+
+.sheet-wheel135,
+.sheet-wheel135 + span::before
+{
+    transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+}
+
+.sheet-wheel153,
+.sheet-wheel153 + span::before
+{
+    transform:rotate(153deg);
+    -ms-transform:rotate(153deg);
+    -webkit-transform:rotate(153deg);
+}
+
+.sheet-wheel171,
+.sheet-wheel171 + span::before
+{
+    transform:rotate(171deg);
+    -ms-transform:rotate(171deg);
+    -webkit-transform:rotate(171deg);
+}
+
+.sheet-wheeln9{
+    transform:rotate(-9deg);
+    -ms-transform:rotate(-9deg); /* IE 9 */
+    -webkit-transform:rotate(-9deg); /* Opera, Chrome, and Safari */
+}
+.sheet-wheeln27{
+    transform:rotate(-27deg);
+    -ms-transform:rotate(-27deg); /* IE 9 */
+    -webkit-transform:rotate(-27deg); /* Opera, Chrome, and Safari */
+}
+.sheet-wheeln45{
+    transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg); /* IE 9 */
+    -webkit-transform:rotate(-45deg); /* Opera, Chrome, and Safari */
+}
+.sheet-wheeln63{
+    transform:rotate(-63deg);
+    -ms-transform:rotate(-63deg); /* IE 9 */
+    -webkit-transform:rotate(-63deg); /* Opera, Chrome, and Safari */
+}
+
+.sheet-wheeln81{
+    transform:rotate(-81deg);
+    -ms-transform:rotate(-81deg); /* IE 9 */
+    -webkit-transform:rotate(-81deg); /* Opera, Chrome, and Safari */
+}
+.sheet-wheeln99{
+    transform:rotate(-99deg);
+    -ms-transform:rotate(-99deg); /* IE 9 */
+    -webkit-transform:rotate(-99deg); /* Opera, Chrome, and Safari */
+}
+
+.sheet-wheeln117{
+    transform:rotate(-117deg);
+    -ms-transform:rotate(-117deg); /* IE 9 */
+    -webkit-transform:rotate(-117deg); /* Opera, Chrome, and Safari */
+}
+.sheet-wheeln135{
+    transform:rotate(-135deg);
+    -ms-transform:rotate(-135deg); /* IE 9 */
+    -webkit-transform:rotate(-135deg); /* Opera, Chrome, and Safari */
+}
+
+.sheet-wheeln153{
+    transform:rotate(-153deg);
+    -ms-transform:rotate(-153deg); /* IE 9 */
+    -webkit-transform:rotate(-153deg); /* Opera, Chrome, and Safari */
+}
+.sheet-wheeln171{
+    transform:rotate(-171deg);
+    -ms-transform:rotate(-171deg); /* IE 9 */
+}
+.sheet-marker {
+    margin: 36px 0px 0px 5px;
+    font-size: 20px;
+}
+
+/*========== By Matt Zaldiver & Lithl | Taken from the M20 Character Sheet==========*/
 div.sheet-qdot {
     margin: -95px 0px 0px -175px;
     font-size:20px;
